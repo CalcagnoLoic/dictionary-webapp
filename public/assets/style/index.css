@@ -12,3 +12,9 @@
     font-family: lora;
   }
 }
+
+@layer components {
+  .dropdown-text {
+    @apply cursor-pointer py-1 text-center hover:font-bold;
+  }
+}
