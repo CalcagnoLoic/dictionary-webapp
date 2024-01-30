@@ -4,7 +4,7 @@ const Icon = () => (
     width="18"
     height="18"
     viewBox="0 0 18 18"
-    className="absolute right-5 top-16 cursor-pointer"
+    className="absolute right-5 top-16 cursor-pointer z-10"
   >
     <path
       fill="none"

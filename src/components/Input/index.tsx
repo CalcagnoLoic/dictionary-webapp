@@ -5,7 +5,7 @@ const Component = () => {
     <div className="relative flex">
       <input
         type="text"
-        className="bg-gallery text-shark my-12 w-full rounded-xl p-4 font-bold outline-none"
+        className="bg-gallery text-shark my-12 w-full rounded-xl p-4 font-bold outline-none z-10"
         placeholder="Search a word..."
       />
 
