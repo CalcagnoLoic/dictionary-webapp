@@ -1,7 +1,7 @@
 import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => (
-  <footer>
+  <footer className="pt-8">
     <Paragraph
       css="text-center text-shark"
       content="Coding with love by @CalcagnoLoic 🎉"

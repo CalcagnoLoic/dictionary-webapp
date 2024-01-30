@@ -13,7 +13,7 @@ const Component = ({ setIsOpen }: DropdownProps) => {
 
   return (
     <div
-      className=" absolute top-16 rounded border-2 px-8 py-4 shadow-xl md:top-20"
+      className="absolute top-16 z-20 rounded border-2 bg-white px-8 py-4 shadow-xl md:top-20"
       ref={dropdownRef}
     >
       <Paragraph css="dropdown-text" content="Serif" />
