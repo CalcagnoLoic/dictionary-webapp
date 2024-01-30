@@ -3,8 +3,8 @@ interface Paragraph {
   content: string;
 }
 
-const Component = ({ css, content }: Paragraph) => (
+const Typographies = ({ css, content }: Paragraph) => (
   <p className={css}>{content}</p>
 );
 
-export default Component;
+export default Typographies;

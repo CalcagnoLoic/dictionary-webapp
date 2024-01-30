@@ -3,7 +3,7 @@ import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => (
   <div className="flex cursor-pointer">
-    <Paragraph css="self-center" content="Sherif" />
+    <Paragraph css="self-center font-bold" content="Serif" />
     <ArrowIcon />
   </div>
 );

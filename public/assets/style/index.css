@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: lora;
+  src: url("../fonts/lora/static/Lora-Regular.ttf");
+}
+
+@layer base {
+  body {
+    font-family: lora;
+  }
+}
