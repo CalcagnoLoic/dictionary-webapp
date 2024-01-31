@@ -2,6 +2,7 @@ import { Meaning } from "../../../types/type";
 
 import Heading from "../../../typographies/Heading";
 import Line from "../../Line";
+import Link from "../../Link";
 import Paragraph from "../../../typographies/Paragraph";
 
 interface MeaningsProps {
@@ -55,7 +56,8 @@ const Component = ({ meanings }: MeaningsProps) => (
                   content="Synonyms"
                 />
                 {meaning.synonyms.slice(0, 5).map((synonym, index) => (
-                  <Paragraph
+                  <Link
+                    href={"#"}
                     css="mt-1 md:mt-5 font-bold text-electricViolet mr-1 underline"
                     content={synonym}
                     key={index}

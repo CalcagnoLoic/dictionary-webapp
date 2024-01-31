@@ -1,3 +1,4 @@
+import Link from "../../Link";
 import Paragraph from "../../../typographies/Paragraph";
 import NewWindowIcon from "../../../icons/NewWindowIcon";
 
@@ -13,14 +14,17 @@ const Component = ({ sourceUrls }: SourceUrlsProps) => {
   return (
     <div className="mt-5 flex flex-col text-sm md:flex-row">
       <Paragraph css="text-scorpion mr-5" content="Source" />
-      <a
+      <Link
         href={sourceUrls}
         target="_blank"
-        className="flex gap-2  text-shark underline "
-      >
-        {primarySourceUrl}
-        <NewWindowIcon />
-      </a>
+        css="flex gap-2  text-shark underline"
+        content={
+          <>
+            {primarySourceUrl}
+            <NewWindowIcon />
+          </>
+        }
+      />
     </div>
   );
 };
