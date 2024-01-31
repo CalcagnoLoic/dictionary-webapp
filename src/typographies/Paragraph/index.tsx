@@ -1,6 +1,6 @@
 interface Paragraph {
   css: string;
-  content: string | string[];
+  content: string | string[] | React.ReactNode;
 }
 
 const Typographies = ({ css, content }: Paragraph) => (

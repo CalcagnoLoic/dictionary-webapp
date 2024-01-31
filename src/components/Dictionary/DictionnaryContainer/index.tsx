@@ -4,26 +4,50 @@ import { useEffect, useState } from "react";
 import DictionaryMeaningsContainer from "../DictionaryMeaningsContainer";
 import DictionaryPhoneticsContainer from "../DictionaryPhoneticsContainer";
 import DictionarySourceUrlsContainer from "../DictionarySourceUrlsContainer";
+import ErrorContainer from "../../ErrorContainer";
 import Line from "../../Line";
+import Loader from "../../Loader";
 
 const Component = () => {
   const [data, setData] = useState<APIResponse | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isError, setIsError] = useState<boolean>(false);
 
   useEffect(() => {
-    const controller = new AbortController();
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.dictionaryapi.dev/api/v2/entries/en/keyboard",
+        );
 
-    fetch("https://api.dictionaryapi.dev/api/v2/entries/en/dog")
-      .then((res) => res.json())
-      .then((data) => setData(data[0]))
-      .catch((error) => console.log(error));
+        if (!response.ok) {
+          setIsError(true);
+          return;
+        }
 
-    return () => {
-      controller.abort();
+        const data = await response.json();
+
+        if (data.length > 0) {
+          setData(data[0]);
+        } else {
+          setIsError(true);
+        }
+      } catch (error) {
+        setIsError(true);
+      } finally {
+        setIsLoading(false);
+      }
     };
+
+    fetchData();
+
+    return () => {};
   }, []);
 
   return (
     <section>
+      {isLoading && !isError && <Loader />}
+
       {data && (
         <>
           <DictionaryPhoneticsContainer
@@ -43,6 +67,8 @@ const Component = () => {
           <DictionarySourceUrlsContainer sourceUrls={data.sourceUrls} />
         </>
       )}
+
+      {isError && <ErrorContainer />}
     </section>
   );
 };
