@@ -17,4 +17,9 @@
   .dropdown-text {
     @apply cursor-pointer py-1 text-center hover:font-bold;
   }
+
+  .custom-style-list {
+    list-style-type: disc;
+    color: #7d2cf2;
+  }
 }

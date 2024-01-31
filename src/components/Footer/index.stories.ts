@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import SwitchDarkMode from "./index";
+import Footer from "./index";
 
 const meta = {
-  title: "Components/SwitchDarkMode",
+  title: "Components/Footer",
   tags: ["autodocs"],
-  component: SwitchDarkMode,
-} satisfies Meta<typeof SwitchDarkMode>;
+  component: Footer,
+} satisfies Meta<typeof Footer>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

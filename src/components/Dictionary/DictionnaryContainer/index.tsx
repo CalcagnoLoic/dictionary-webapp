@@ -12,7 +12,7 @@ const Component = () => {
   useEffect(() => {
     const controller = new AbortController();
 
-    fetch("https://api.dictionaryapi.dev/api/v2/entries/en/keyboard")
+    fetch("https://api.dictionaryapi.dev/api/v2/entries/en/dog")
       .then((res) => res.json())
       .then((data) => setData(data[0]))
       .catch((error) => console.log(error));
@@ -29,6 +29,11 @@ const Component = () => {
           <DictionaryPhoneticsContainer
             word={data.word}
             phonetic={data.phonetic}
+            audio={
+              data.phonetics.length > 0
+                ? data.phonetics.find((entry) => entry.audio)?.audio
+                : undefined
+            }
           />
 
           <DictionaryMeaningsContainer meanings={data.meanings} />
