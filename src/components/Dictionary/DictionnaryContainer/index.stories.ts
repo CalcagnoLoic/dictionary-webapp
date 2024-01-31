@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import SwitchDarkMode from "./index";
+import Dictionary from "./index";
 
 const meta = {
-  title: "Components/SwitchDarkMode",
+  title: "Components/Dictionary",
   tags: ["autodocs"],
-  component: SwitchDarkMode,
-} satisfies Meta<typeof SwitchDarkMode>;
+  component: Dictionary,
+} satisfies Meta<typeof Dictionary>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

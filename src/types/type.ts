@@ -1,8 +1,8 @@
-type Definition = {
+export type Definition = {
   definition: string;
   synonyms: string[];
   antonyms: string[];
-  example?: string;
+  example: string;
 };
 
 export type Meaning = {
@@ -11,3 +11,7 @@ export type Meaning = {
   synonyms: string[];
   antonyms: string[];
 };
+
+export type Phonetic = {
+  audio: string
+}

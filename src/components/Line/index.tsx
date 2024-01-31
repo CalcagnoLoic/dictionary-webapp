@@ -1,5 +1,5 @@
 type LineProps = {
-  additionalCSS: string;
+  additionalCSS?: string;
 };
 
 const Component = ({ additionalCSS }: LineProps) => (

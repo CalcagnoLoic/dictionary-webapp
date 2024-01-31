@@ -17,7 +17,7 @@ const Typographies = ({ kind, content }: TypographiesHeading) => {
     );
   }
   if (kind === "h3") {
-    return <h3 className="text-nobel font-bold text-lg">{content}</h3>;
+    return <h3 className="text-silverChalice font-bold text-lg">{content}</h3>;
   }
 };
 

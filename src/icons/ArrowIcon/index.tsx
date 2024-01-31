@@ -6,7 +6,7 @@ const Icon = () => (
     viewBox="0 0 14 8"
     className="self-center mx-3"
   >
-    <path fill="none" stroke="#A445ED" stroke-width="1.5" d="m1 1 6 6 6-6" />
+    <path fill="none" stroke="#A445ED" strokeWidth="1.5" d="m1 1 6 6 6-6" />
   </svg>
 );
 
