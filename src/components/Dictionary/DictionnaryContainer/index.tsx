@@ -7,8 +7,8 @@ import ErrorContainer from "../../ErrorContainer";
 import Line from "../../Line";
 import Loader from "../../Loader";
 
-const Component = () => {
-  const {isLoading, isData, isError } = useFetch("dog")
+const Component = ({ word }: { word: string }) => {
+  const { isLoading, isData, isError } = useFetch(word);
 
   return (
     <section>

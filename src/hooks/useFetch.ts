@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { APIResponse } from "../types/interface";
 
 export const useFetch = (word: string) => {
-  const [isData, setIsData] = useState<APIResponse>();
+  const [isData, setIsData] = useState<APIResponse | null>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isError, setIsError] = useState<boolean>(false);
 
@@ -30,6 +30,12 @@ export const useFetch = (word: string) => {
     };
 
     fetchData();
+
+    return () => {
+      setIsLoading(true);
+      setIsData(null);
+      setIsError(false);
+    };
   }, [word]);
 
   return { isLoading, isData, isError };
