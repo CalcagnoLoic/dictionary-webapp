@@ -9,6 +9,8 @@ export default {
         scorpion: "#575757",
         silverChalice: "#A3A3A3",
         gallery: "#EBEBEB",
+        codGray: "#0C0C0C",
+        white: "#FFFFFF",
       },
       customStyleList: {
         listStyleType: "disc",
