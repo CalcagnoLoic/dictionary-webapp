@@ -30,7 +30,7 @@ const Component = ({ handleInputChange, searchWord }: InputProps) => {
       <form className="relative flex" onSubmit={handleSubmit}>
         <input
           type="text"
-          className={`z-10 my-12 w-full rounded-xl p-4 font-bold outline-none ${isDarkMode ? "bg-shark text-gallery" : "bg-gallery text-shark"}`}
+          className={`z-10 mt-12 w-full rounded-xl p-4 font-bold outline-none ${isDarkMode ? "bg-shark text-gallery" : "bg-gallery text-shark"}`}
           placeholder="Search a word..."
           value={inputValue}
           onChange={handleChange}
@@ -43,8 +43,8 @@ const Component = ({ handleInputChange, searchWord }: InputProps) => {
 
       {errorValue && (
         <Paragraph
-          kind="p"
-          css="text-alizarinCrimson text-sm italic -mt-10 font-bold"
+          kind="span"
+          css="text-alizarinCrimson text-sm italic font-bold inline-block"
           content="Input musn't be empty!"
         />
       )}
