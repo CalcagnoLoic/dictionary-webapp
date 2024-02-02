@@ -1,4 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import { useDarkModeContext } from "../../hooks/useDarkModeContext";
 
 import Paragraph from "../../typographies/Paragraph";
 import SearchIcon from "../../icons/SearchIcon";
@@ -11,6 +12,8 @@ interface InputProps {
 const Component = ({ handleInputChange, searchWord }: InputProps) => {
   const [errorValue, setErrorValue] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>(searchWord);
+
+  const { isDarkMode } = useDarkModeContext();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
@@ -27,7 +30,7 @@ const Component = ({ handleInputChange, searchWord }: InputProps) => {
       <form className="relative flex" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="z-10 my-12 w-full rounded-xl bg-gallery p-4 font-bold text-shark outline-none"
+          className={`z-10 mt-12 w-full rounded-xl p-4 font-bold outline-none ${isDarkMode ? "bg-shark text-gallery" : "bg-gallery text-shark"}`}
           placeholder="Search a word..."
           value={inputValue}
           onChange={handleChange}
@@ -40,7 +43,8 @@ const Component = ({ handleInputChange, searchWord }: InputProps) => {
 
       {errorValue && (
         <Paragraph
-          css="text-red-500 text-sm italic -mt-10 font-bold"
+          kind="span"
+          css="text-alizarinCrimson text-sm italic font-bold inline-block"
           content="Input musn't be empty!"
         />
       )}

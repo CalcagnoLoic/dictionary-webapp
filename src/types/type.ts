@@ -13,5 +13,5 @@ export type Meaning = {
 };
 
 export type Phonetic = {
-  audio: string
-}
+  audio: string;
+};

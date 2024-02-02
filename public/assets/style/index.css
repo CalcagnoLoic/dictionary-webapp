@@ -7,6 +7,16 @@
   src: url("../fonts/lora/static/Lora-Regular.ttf");
 }
 
+@font-face {
+  font-family: inter;
+  src: url("../fonts/inter/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: inconsolata;
+  src: url("../fonts/inconsolata/static/Inconsolata-Regular.ttf");
+}
+
 @layer base {
   body {
     font-family: lora;
@@ -17,9 +27,11 @@
   .dropdown-text {
     @apply cursor-pointer py-1 text-center hover:font-bold;
   }
+  .dropdown-text:hover {
+    @apply text-electricViolet;
+  }
 
-  .custom-style-list {
-    list-style-type: disc;
-    color: #7d2cf2;
+  .switch-dark-mode {
+    @apply h-6 w-11 rounded-full after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:bg-white after:transition-all after:content-['']  dark:border-scorpion dark:bg-scorpion;
   }
 }

@@ -1,7 +1,8 @@
 import { useState } from "react";
+
 import ArrowIcon from "../../icons/ArrowIcon";
-import Paragraph from "../../typographies/Paragraph";
 import Dropdown from "../Dropdown";
+import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,7 +15,7 @@ const Component = () => {
   return (
     <>
       <div className="flex cursor-pointer" onClick={handleClick}>
-        <Paragraph css="self-center font-bold" content="Serif" />
+        <Paragraph kind="p" css="self-center font-bold" content="Serif" />
         <ArrowIcon />
       </div>
 
