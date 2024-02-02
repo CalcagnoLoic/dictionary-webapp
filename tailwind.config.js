@@ -9,8 +9,8 @@ export default {
         scorpion: "#575757",
         silverChalice: "#A3A3A3",
         gallery: "#EBEBEB",
-        codGray: "#0C0C0C",
-        white: "#FFFFFF",
+        mineShaft: "#212121",
+        alizarinCrimson: "#DC1E1E",
       },
       customStyleList: {
         listStyleType: "disc",

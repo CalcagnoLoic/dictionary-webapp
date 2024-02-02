@@ -1,8 +1,8 @@
 import { useFetch } from "../../../hooks/useFetch";
 
-import DictionaryMeaningsContainer from "../DictionaryMeaningsContainer";
-import DictionaryPhoneticsContainer from "../DictionaryPhoneticsContainer";
-import DictionarySourceUrlsContainer from "../DictionarySourceUrlsContainer";
+import DictionaryMeanings from "../DictionaryMeanings";
+import DictionaryPhonetics from "../DictionaryPhonetics";
+import DictionarySourceUrls from "../DictionarySourceUrls";
 import ErrorContainer from "../../ErrorContainer";
 import Line from "../../Line";
 import Loader from "../../Loader";
@@ -16,7 +16,7 @@ const Component = ({ word }: { word: string }) => {
 
       {isData && (
         <>
-          <DictionaryPhoneticsContainer
+          <DictionaryPhonetics
             word={isData.word}
             phonetic={isData.phonetic}
             audio={
@@ -26,11 +26,11 @@ const Component = ({ word }: { word: string }) => {
             }
           />
 
-          <DictionaryMeaningsContainer meanings={isData.meanings} />
+          <DictionaryMeanings meanings={isData.meanings} />
 
           <Line />
 
-          <DictionarySourceUrlsContainer sourceUrls={isData.sourceUrls} />
+          <DictionarySourceUrls sourceUrls={isData.sourceUrls} />
         </>
       )}
 

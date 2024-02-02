@@ -4,6 +4,7 @@ import Paragraph from "../../typographies/Paragraph";
 const Component = () => (
   <footer className="pt-8">
     <Paragraph
+      kind="p"
       css="text-center text-shark"
       content={
         <>

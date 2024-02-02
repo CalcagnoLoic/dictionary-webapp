@@ -2,11 +2,13 @@ import Heading from "../../typographies/Heading";
 import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => (
-  <section className="text-center mt-12">
-    <span className="text-7xl">😕</span>
+  <section className="mt-12 text-center">
+    <Paragraph kind="span" css="text-7xl" content="😕" />
+
     <Heading kind="h2" content="No definitions found" />
+
     <Paragraph
-      css=""
+      kind="p"
       content="Sorry pal, we couldn't find definitions for the word you were looking for."
     />
   </section>

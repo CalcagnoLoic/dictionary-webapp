@@ -14,23 +14,20 @@ type Story = StoryObj<typeof meta>;
 export const H1: Story = {
   args: {
     kind: "h1",
-    content:
-      "Dog",
+    content: "Dog",
   },
 };
 
 export const H2: Story = {
   args: {
     kind: "h2",
-    content:
-      "noun",
+    content: "noun",
   },
 };
 
 export const H3: Story = {
   args: {
     kind: "h3",
-    content:
-      "Meaning",
+    content: "Meaning",
   },
 };

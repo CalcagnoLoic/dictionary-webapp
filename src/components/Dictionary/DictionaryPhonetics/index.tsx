@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
-import Paragraph from "../../../typographies/Paragraph";
 import Heading from "../../../typographies/Heading";
+import Paragraph from "../../../typographies/Paragraph";
 import PlayIcon from "../../../icons/PlayIcon";
 
 interface PhoneticProps {
@@ -24,7 +24,11 @@ const Component = ({ word, phonetic, audio }: PhoneticProps) => {
       <div className="self-center">
         <Heading kind="h1" content={word} />
 
-        <Paragraph css="mt-3 text-xl text-electricViolet" content={phonetic} />
+        <Paragraph
+          kind="span"
+          css="text-xl text-electricViolet"
+          content={phonetic}
+        />
       </div>
 
       <>

@@ -4,7 +4,7 @@ const Icon = () => (
     width="14"
     height="8"
     viewBox="0 0 14 8"
-    className="self-center mx-3"
+    className="mx-3 self-center"
   >
     <path fill="none" stroke="#A445ED" strokeWidth="1.5" d="m1 1 6 6 6-6" />
   </svg>
