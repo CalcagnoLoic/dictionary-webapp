@@ -36,7 +36,7 @@ const Component = ({ meanings }: MeaningsProps) => (
                     />
                   </li>
                   {definition.example && (
-                    <li key={definitionIndex}>
+                    <li>
                       <Paragraph
                         kind="span"
                         css="ml-3 text-silverChalice"

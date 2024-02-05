@@ -12,9 +12,10 @@ export default {
         mineShaft: "#212121",
         alizarinCrimson: "#DC1E1E",
       },
-      customStyleList: {
-        listStyleType: "disc",
-        color: "#7D2CF2",
+      fontFamily: {
+        serif: ["lora"],
+        sans: ["inter"],
+        mono: ["inconsolata"],
       },
     },
   },
