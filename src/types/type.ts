@@ -12,6 +12,10 @@ export type Meaning = {
   antonyms: string[];
 };
 
+export type MeaningProps = {
+  meaning: Meaning;
+};
+
 export type Phonetic = {
   audio: string;
 };
