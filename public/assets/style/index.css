@@ -19,7 +19,7 @@
 
 @layer base {
   body {
-    font-family: lora;
+    @apply font-serif;
   }
 }
 
@@ -29,6 +29,16 @@
   }
   .dropdown-text:hover {
     @apply text-electricViolet;
+  }
+
+  .font-txt-serif {
+    @apply font-serif;
+  }
+  .font-txt-sans {
+    @apply font-sans;
+  }
+  .font-txt-mono {
+    @apply font-mono;
   }
 
   .switch-dark-mode {

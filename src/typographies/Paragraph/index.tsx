@@ -4,14 +4,18 @@ interface Paragraph {
   kind: "p" | "span";
   css?: string;
   content: string | string[] | React.ReactNode;
+  handleClick?: React.MouseEventHandler<HTMLParagraphElement>;
 }
 
-const Typographies = ({ kind, css, content }: Paragraph) => {
+const Typographies = ({ kind, css, content, handleClick }: Paragraph) => {
   const { isDarkMode } = useDarkModeContext();
 
   if (kind === "p") {
     return (
-      <p className={`${css} ${isDarkMode ? "text-white" : "text-shark"}`}>
+      <p
+        onClick={handleClick}
+        className={`${css} ${isDarkMode ? "text-white" : "text-shark"}`}
+      >
         {content}
       </p>
     );
