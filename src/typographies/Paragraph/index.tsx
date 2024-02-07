@@ -4,7 +4,7 @@ interface Paragraph {
   kind: "p" | "span";
   css?: string;
   content: string | string[] | React.ReactNode;
-  handleClick?: React.MouseEventHandler<HTMLParagraphElement>;
+  handleClick?: React.MouseEventHandler<HTMLParagraphElement | HTMLSpanElement>;
 }
 
 const Typographies = ({ kind, css, content, handleClick }: Paragraph) => {

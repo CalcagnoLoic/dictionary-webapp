@@ -1,6 +1,4 @@
 import { Meaning } from "../../../types/type";
-import { useFetch } from "../../../hooks/useFetch";
-import { useState } from "react";
 
 import DictionnaryDefinition from "../DictionnaryDefinition";
 import DictionarySynonyms from "../DictionarySynonyms";

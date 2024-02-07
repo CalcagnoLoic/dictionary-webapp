@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 interface DarkModeProps {
   isDarkMode: boolean;
@@ -20,6 +20,12 @@ export const DarkModeProvider = ({ children }: DarkModeProvider) => {
   const toggleDarkMode = () => {
     setIsDarkMode((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    const systemsSettings = window.matchMedia("(prefers-color-scheme: dark)");
+    if (systemsSettings.matches) setIsDarkMode(true);
+    systemsSettings.addEventListener("change", (e) => setIsDarkMode(e.matches));
+  }, []);
 
   isDarkMode
     ? document.body.classList.add("bg-mineShaft")
