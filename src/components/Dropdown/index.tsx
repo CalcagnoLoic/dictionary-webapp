@@ -12,8 +12,7 @@ type DropdownProps = {
 const Component = ({ setIsOpen }: DropdownProps) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { isDarkMode } = useDarkModeContext();
-  const { toggleFontSerif, toggleFontSansSerif, toggleFontMono } =
-    useFontContext();
+  const { toggleFont } = useFontContext();
 
   useClickOutside({ ref: dropdownRef, callback: setIsOpen });
 
@@ -23,21 +22,21 @@ const Component = ({ setIsOpen }: DropdownProps) => {
       ref={dropdownRef}
     >
       <Paragraph
-        handleClick={toggleFontSerif}
+        handleClick={() => toggleFont("Serif")}
         kind="p"
-        css="dropdown-text"
+        css="dropdown-text font-serif"
         content="Serif"
       />
       <Paragraph
-        handleClick={toggleFontSansSerif}
+        handleClick={() => toggleFont("Sans-serif")}
         kind="p"
-        css="dropdown-text"
+        css="dropdown-text font-sans"
         content="Sans-serif"
       />
       <Paragraph
-        handleClick={toggleFontMono}
+        handleClick={() => toggleFont("Mono")}
         kind="p"
-        css="dropdown-text"
+        css="dropdown-text font-mono"
         content="Mono"
       />
     </div>

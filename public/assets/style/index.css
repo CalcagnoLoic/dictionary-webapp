@@ -42,6 +42,6 @@
   }
 
   .switch-dark-mode {
-    @apply h-6 w-11 rounded-full after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:bg-white after:transition-all after:content-['']  dark:border-scorpion dark:bg-scorpion;
+    @apply h-6 w-11 rounded-full border-scorpion bg-scorpion after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:bg-white  after:transition-all after:content-[''];
   }
 }
