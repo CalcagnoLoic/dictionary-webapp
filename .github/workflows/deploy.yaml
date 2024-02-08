@@ -25,7 +25,7 @@ jobs:
           cache: "npm"
 
       - name: "Install dependencies"
-        run: npm run install
+        run: npm i
 
       - name: "Linter"
         run: npm run lint
@@ -52,7 +52,7 @@ jobs:
           cache: "npm"
 
       - name: "Install dependencies"
-        run: npm run install
+        run: npm i
 
       - name: "Configure GH page"
         uses: actions/configure-pages@v3
