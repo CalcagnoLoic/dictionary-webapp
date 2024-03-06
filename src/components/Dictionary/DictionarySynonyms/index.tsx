@@ -17,7 +17,6 @@ const Component = ({ meaning }: MeaningProps) => {
             .slice(0, 5)
             .map((synonym: string, index: number) => (
               <Link
-                href={synonym}
                 css="mt-1 md:mt-5 font-bold text-electricViolet mr-1 underline"
                 content={synonym}
                 key={index}

@@ -1,5 +1,5 @@
 interface LinkProps {
-  href: string;
+  href?: string;
   css?: string;
   content: string | React.ReactNode;
   target?: string;
