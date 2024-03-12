@@ -5,7 +5,7 @@ This dictionary provides definitions and examples by lexical field. Two contexts
 - One for darkMode (this adapts to the user's system preferences)
 - One for changing the font (serif, sans-serif and mono)
 
-The stories are hosted on Chromatic at this [URL](https://65c4faea26944c656f6474a3-hvxcsqaonk.chromatic.com/).
+The stories are hosted on Chromatic at this [URL](https://65c4faea26944c656f6474a3-sfiofbresk.chromatic.com/).
 
 <p align="center">
   <a href="https://skillicons.dev">
