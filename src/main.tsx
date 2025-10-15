@@ -1,9 +1,8 @@
-import { DarkModeProvider } from "./context/DarkModeContext/index.tsx";
-import { FontProvider } from "./context/FontContext/index.tsx";
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import { DarkModeProvider } from "./context/Darkmode/DarkModeProvider.tsx";
+import { FontProvider } from "./context/Font/FontProvider.tsx";
 
 import "../public/assets/style/index.css";
 
