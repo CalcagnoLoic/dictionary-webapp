@@ -1,24 +1,13 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
+import { FontContext, FontContextType, FontType } from "./FontContext";
 
 const CLASS_SERIF = "font-txt-serif";
 const CLASS_SANS_SERIF = "font-txt-sans";
 const CLASS_MONO = "font-txt-mono";
 
-export type FontType = "Serif" | "Sans-serif" | "Mono"
-
-export interface FontContextType {
-  font: FontType;
-  toggleFont: (font: FontType) => void;
-}
-
 type FontProvider = {
   children: JSX.Element | JSX.Element[];
 };
-
-export const FontContext = createContext<FontContextType>({
-  font: "Serif",
-  toggleFont: () => {},
-});
 
 export const FontProvider = ({ children }: FontProvider) => {
   const [font, setFont] = useState<FontType>("Serif");
